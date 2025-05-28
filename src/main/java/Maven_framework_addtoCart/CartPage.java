@@ -32,17 +32,13 @@ WebDriver driver;
 	
 	public Boolean varifyProduct(String prod)
 	{
-		for(WebElement i: cartProduct)
-		{
-			System.out.println(i.getText());
-		}
 		 boolean match=cartProduct.stream().anyMatch(s->s.getText().equalsIgnoreCase(prod));
 		return match;
 		   
 	}
 	public void clickCheckout() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		checkhoutButton.click();
 		
 		

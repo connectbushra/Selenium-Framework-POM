@@ -43,12 +43,11 @@ WebDriver driver;
 		city.sendKeys("india");
 		wait_forElementAppear(list_group);
 		CityButton.click();
-		Thread.sleep(2000);
 		// scroll window...............................
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
-		
+		Thread.sleep(2000);
 		submit.click();		
 }
 	

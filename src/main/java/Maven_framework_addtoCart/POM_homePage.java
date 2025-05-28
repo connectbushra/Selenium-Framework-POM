@@ -44,6 +44,7 @@ public class POM_homePage {
 	    assertTrue(msg.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 	   System.out.println("THANKYOU FOR THE ORDER.");
 	   driver.close();    
+	   driver.quit();
 
 	}
 
