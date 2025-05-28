@@ -18,13 +18,12 @@
 	<dependencies>
 
 		<!-- TestNG for testing -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.5.1</version>
-			<scope>test</scope>
-		</dependency>
-
+	<dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.9.0</version>
+        <scope>test</scope> 
+    </dependency>
 		<!-- Selenium Java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -62,6 +61,22 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		</dependencies>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.2.5</version>
+					<configuration>					       
+						 <includes>
+                    			<include>**/POM_homePage.class</include>
+               			 </includes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
 
-	</dependencies>
+
+	
 </project>

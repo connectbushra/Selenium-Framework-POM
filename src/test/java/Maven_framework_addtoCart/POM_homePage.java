@@ -13,13 +13,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import dev.failsafe.internal.util.Assert;
 import page_object_model.Landing_Page;
 
 public class POM_homePage {
 
-	public static void main(String[] args) throws InterruptedException {
+	 @Test
+	  public void addToCartTest()  throws InterruptedException {
 		// TODO Auto-generated method stub
 		String product_name="IPHONE 13 PRO";
 		WebDriverManager.chromedriver().setup(); // Auto-downloads compatible ChromeDriver
@@ -29,7 +31,6 @@ public class POM_homePage {
 		Landing_Page lpPage=new Landing_Page(driver);
 		lpPage.goTo();
 		lpPage.loginApplication("bush@gmail.com","Bushra@786");
-		
 		product_catatlog product_catatlog=new product_catatlog(driver);
 		List<WebElement> products=product_catatlog.getProductList();
 	    product_catatlog.product_addtocart(product_name);
