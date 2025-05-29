@@ -58,7 +58,7 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>5.0.9</version>
+			<version>4.1.7</version> <!-- Stable with Java 8–17 -->
 		</dependency>
 
 		<dependency>

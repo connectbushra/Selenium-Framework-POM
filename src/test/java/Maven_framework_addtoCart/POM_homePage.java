@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -22,7 +24,7 @@ public class POM_homePage {
     ExtentReports extent;
     ExtentTest test;
 
-    @BeforeSuite
+    @BeforeTest
     public void setupReport() {
         ExtentSparkReporter reporter = new ExtentSparkReporter("test-output/ExtentReport.html");
         reporter.config().setReportName("Automation Report");
@@ -71,7 +73,7 @@ public class POM_homePage {
         }
     }
 
-    @AfterSuite
+    @AfterTest
     public void tearDownReport() {
         extent.flush(); // Important: this writes the report
     }
